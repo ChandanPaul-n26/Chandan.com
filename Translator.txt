@@ -1,0 +1,7 @@
+Input: hi
+Output: Salut
+---
+Input: I am Chandan Paul
+Output: আমি চন্দন পল
+---
+

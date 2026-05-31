@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="Grade.css">
+</head>
+<body>
+    <div class="cp">
+       <div class="cp1">
+           <h1>Student Grade Calculator</h1>
+              <p>Enter your details below to calculate your grade :</p>
+                <div class="details">
+                    <label for="name">Name :</lable>
+                    <input type="text" id="name" placeholder="Enter your name">
+
+                    <label for="class">Class :</label>
+                    <input type="text" id="class" placeholder="Enter your class">
+
+                    <label for="sec">Section :</label>
+                    <input type="text" id="sec" placeholder="Enter your section">
+
+                    <label for="roll">Roll No :</label>
+                    <input type="text" id="roll" placeholder="Enter your roll number">
+                </div>
+            <div class="subjects">
+                <h2>Subjects</h2>
+                <select id="stream" onchange="updateSubjects()">
+                    <option value="Science">Science</option>
+                    <option value="Commerce">Commerce</option>
+                    <option value="Arts">Arts</option>
+                </select>
+                <div id="subject-inputs"></div>
+                <button onclick="calculateGrade()">Calculate Grade</button>
+                <div id="grade-result" style="margin-top:15px;font-weight:bold;"></div>
+            </div>
+       </div>
+    </div>
+ <script src="Grade.js"></script>  
+</body>
+</html>

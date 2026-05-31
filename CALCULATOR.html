@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="CLACULATOR.css">
+</head>
+<body>
+  <main class="calculator-wrap">
+    <header class="calc-header">Calculator</header>
+    <section id="calc" class="calc-card">
+      <div class="display">
+        <input type="text" id="res" readonly placeholder="0" aria-label="Calculator display">
+      </div>
+
+      <div class="keys">
+        <input type="button" class="key key-fn" value="C" onclick="Clear()" id="clear">
+        <input type="button" class="key key-fn" value="⌫" onclick="Back()" id="backspace">
+        <input type="button" class="key key-fn" id="sci-toggle" value="Sci" onclick="toggleSci()" title="Show scientific functions">
+        <input type="button" class="key key-op" value="%" onclick="Solve('%')">
+        <input type="button" class="key key-op" value="/" onclick="Solve('/')">
+
+        <input type="button" class="key" value="7" onclick="Solve('7')">
+        <input type="button" class="key" value="8" onclick="Solve('8')">
+        <input type="button" class="key" value="9" onclick="Solve('9')">
+        <input type="button" class="key key-op" value="*" onclick="Solve('*')">
+
+        <input type="button" class="key" value="4" onclick="Solve('4')">
+        <input type="button" class="key" value="5" onclick="Solve('5')">
+        <input type="button" class="key" value="6" onclick="Solve('6')">
+        <input type="button" class="key key-op" value="-" onclick="Solve('-')">
+
+        <input type="button" class="key" value="1" onclick="Solve('1')">
+        <input type="button" class="key" value="2" onclick="Solve('2')">
+        <input type="button" class="key" value="3" onclick="Solve('3')">
+        <input type="button" class="key key-op" value="+" onclick="Solve('+')">
+
+        <input type="button" class="key" value="00" onclick="Solve('00')">
+        <input type="button" class="key" value="0" onclick="Solve('0')">
+        <input type="button" class="key" value="." onclick="Solve('.')">
+        <input type="button" class="key key-eq" value="=" onclick="Result()">
+      </div>
+      
+      <div class="keys-sci hidden" id="keys-sci" aria-hidden="true">
+        <input type="button" class="key key-op" value="sin(" onclick="Solve('sin(')">
+        <input type="button" class="key key-op" value="cos(" onclick="Solve('cos(')">
+        <input type="button" class="key key-op" value="tan(" onclick="Solve('tan(')">
+        <input type="button" class="key key-op" value="ln(" onclick="Solve('ln(')">
+        <input type="button" class="key key-op" value="log(" onclick="Solve('log(')">
+
+        <input type="button" class="key key-op" value="√(" onclick="Solve('sqrt(')">
+        <input type="button" class="key key-op" value="^" onclick="Solve('^')">
+        <input type="button" class="key" value="(" onclick="Solve('(')">
+        <input type="button" class="key" value=")" onclick="Solve(')')">
+        <input type="button" class="key" value="pi" onclick="Solve('pi')">
+
+        <input type="button" class="key" value="e" onclick="Solve('e')">
+        <input type="button" class="key" value="abs(" onclick="Solve('abs(')">
+        <input type="button" class="key" value="%" onclick="Solve('%')">
+        <input type="button" class="key" value="," onclick="Solve(',')" style="visibility:hidden">
+        <input type="button" class="key" value="," onclick="Solve(',')" style="visibility:hidden">
+      </div>
+    </section>
+    <footer class="calc-foot">Use keyboard: numbers, + - * / . % Enter Backspace C</footer>
+  </main>
+
+  <script src="CALCULATOR.js"></script>
+</body>
+</html>

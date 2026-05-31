@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="777.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🎮 Rock Paper Scissors</h1>
+        
+        <div class="difficulty-selector">
+            <button class="difficulty-btn active" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+        </div>
+
+        <div class="score-board">
+            <div class="score">You: <span id="player-score">0</span></div>
+            <div class="score">Computer: <span id="computer-score">0</span></div>
+        </div>
+
+        <div class="result-section">
+            <div class="choices-display" id="choices-display">
+                <div class="player-choice">
+                    <div class="choice-display" id="player-choice-emoji">❓</div>
+                    <div class="choice-label">Your Choice</div>
+                </div>
+                <div class="vs-text">VS</div>
+                <div class="computer-choice">
+                    <div class="choice-display" id="computer-choice-emoji">❓</div>
+                    <div class="choice-label">Computer</div>
+                </div>
+            </div>
+            <div id="result-message" class="result-message">Choose your weapon!</div>
+        </div>
+
+        <div class="buttons">
+            <button class="choice-button" id="rock">
+                <span class="choice-emoji">✊</span>
+                <span>Rock</span>
+            </button>
+            <button class="choice-button" id="paper">
+                <span class="choice-emoji">✋</span>
+                <span>Paper</span>
+            </button>
+            <button class="choice-button" id="scissors">
+                <span class="choice-emoji">✌️</span>
+                <span>Scissors</span>
+            </button>
+        </div>
+
+        <div class="button-group">
+            <button class="reset-btn" id="reset-btn">Reset Score</button>
+            <button class="home-btn" id="home-btn">Back to Home</button>
+        </div>
+
+        <div class="stats">
+            <p>Wins: <span id="win-count">0</span> | Losses: <span id="loss-count">0</span> | Draws: <span id="draw-count">0</span></p>
+        </div>
+    </div>
+    <script src="777.js"></script>
+</body>
+</html>

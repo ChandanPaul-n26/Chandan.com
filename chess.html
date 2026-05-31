@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess World</title>
+    <link rel="stylesheet" href="chess.css">
+</head>
+<body>
+    <div id="home-page" class="page active">
+        <h1>Chess World</h1>
+        <div class="menu">
+            <button id="two-player">Two Player</button>
+            <button id="vs-ai">Vs AI</button>
+        </div>
+        <div id="ai-options" class="hidden">
+            <h2>Select Difficulty</h2>
+            <button class="difficulty" data-level="1">Level 1 - Beginner</button>
+            <button class="difficulty" data-level="2">Level 2 - Novice</button>
+            <button class="difficulty" data-level="3">Level 3 - Amateur</button>
+            <button class="difficulty" data-level="4">Level 4 - Intermediate</button>
+            <button class="difficulty" data-level="5">Level 5 - Advanced</button>
+            <button class="difficulty" data-level="6">Level 6 - Expert</button>
+            <button class="difficulty" data-level="7">Level 7 - Master</button>
+            <button class="difficulty" data-level="8">Level 8 - Grandmaster</button>
+            <button class="difficulty" data-level="9">Level 9 - Elite</button>
+            <button class="difficulty" data-level="10">Level 10 - Supreme</button>
+        </div>
+        <div id="timer-setup" class="hidden">
+            <h2>Set Timer (minutes per player)</h2>
+            <input type="number" id="timer-input" min="1" max="60" value="10">
+            <button id="start-game">Start Game</button>
+        </div>
+    </div>
+    <div id="game-page" class="page">
+        <div id="game-ui">
+            <div id="timers">
+                <div id="white-timer">10:00</div>
+                <div id="black-timer">10:00</div>
+            </div>
+            <div id="status">White's turn</div>
+            <button id="reset">Reset Game</button>
+            <button id="back-home">Back to Home</button>
+        </div>
+        <div id="chess-board"></div>
+    </div>
+    <script src="chess.js"></script>
+</body>
+</html>

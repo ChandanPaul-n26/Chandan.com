@@ -1,0 +1,36 @@
+/* Basic reset */
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; font-family: Inter, Roboto, Arial, sans-serif; background: linear-gradient(180deg,#eef2ff 0%, #f8fafc 100%); }
+
+.calculator-wrap { display:flex; align-items:center; justify-content:center; flex-direction:column; min-height:100vh; padding:20px; }
+.calc-header { font-size:1.1rem; color:#374151; margin-bottom:12px; font-weight:600; }
+.calc-card { background:linear-gradient(180deg,#ffffff 0%, #fbfdff 100%); border-radius:14px; box-shadow: 0 8px 30px rgba(15,23,42,0.08); padding:18px; width:340px; max-width:95vw; }
+.display { background:#0f172a; color:#fff; border-radius:8px; padding:12px; margin-bottom:14px; }
+.display input { width:100%; border:0; outline:0; background:transparent; color:#e6eef8; font-size:1.6rem; text-align:right; padding:6px 8px; }
+
+.keys { display:grid; grid-template-columns: repeat(4, 1fr); gap:10px; }
+.key { appearance:none; border:0; border-radius:8px; padding:14px 8px; font-size:1.05rem; background:#f3f4f6; cursor:pointer; color:#0f172a; transition:transform .06s ease, box-shadow .06s ease; box-shadow: 0 4px 10px rgba(2,6,23,0.06); }
+.key:active { transform:translateY(1px); }
+.key-fn { background:#f43f5e; color:#fff; box-shadow: 0 6px 18px rgba(244,63,94,0.18); }
+.key-fn:active { transform:translateY(1px) scale(.998); }
+.key-op { background:#e6f0ff; color:#0b61ff; box-shadow: 0 6px 18px rgba(11,97,255,0.06); }
+.key-eq { background:linear-gradient(90deg,#06b6d4,#0ea5e9); color:#fff; grid-column:4; box-shadow: 0 8px 26px rgba(6,165,233,0.18); }
+
+.calc-foot { margin-top:12px; font-size:0.85rem; color:#6b7280; text-align:center; }
+
+/* Responsive tweaks */
+@media (max-width:420px) {
+	.calc-card { padding:14px; }
+	.display input { font-size:1.4rem; }
+	.key { padding:12px 6px; font-size:1rem; }
+}
+
+/* Focus styles for accessibility */
+.key:focus { outline:3px solid rgba(2,132,199,0.12); }
+
+/* Scientific keys panel */
+.keys-sci { display:grid; grid-template-columns: repeat(5, 1fr); gap:8px; margin-top:12px; }
+.keys-sci.hidden { display:none; }
+.keys-sci .key { padding:10px 6px; font-size:0.95rem; border-radius:8px; background:#f8fafc; box-shadow: 0 4px 12px rgba(2,6,23,0.04); }
+.keys-sci .key-op { background:#fff7ed; color:#b45309; }
+

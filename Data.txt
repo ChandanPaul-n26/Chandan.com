@@ -1,0 +1,10 @@
+3. Real-Time Collaborative Task Manager
+A productivity tool where multiple users can manage projects, drag-and-drop tasks on a Kanban board, and see live updates from other team members using WebSockets.
+
+Home: An overview of active projects, a feed of recent team activity, and a quick-add widget for new tasks.
+
+About: Details on data privacy, the tech stack used to achieve real-time synchronization, and the core philosophy of the tool.
+
+Contact: Enterprise sales inquiries and direct developer support forms.
+
+Help: Step-by-step video tutorials, API documentation for developers wanting to build integrations, and community forums.

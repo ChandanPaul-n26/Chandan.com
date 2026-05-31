@@ -1,0 +1,125 @@
+body {
+    background-image: url(ET.jpeg);
+    display: flex;
+    justify-content: center;
+}
+
+.cp {
+    background-color: rgb(0, 255, 0);
+    width: 1500px;
+    height: 800px;
+    margin-top: 50px;
+    border: 10px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cp2 {
+    margin-top: 20px;
+    height: 100px;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+input {
+    width: 250px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+select {
+    width: 250px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+input:hover, button:hover, select:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: blue;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+    height: 60px;
+    transition: height 0.2s ease;
+    width: 300px;
+}
+
+.cp3 {
+    margin-top: 20px;
+    height: 450px;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cp3 table {
+
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+    .cp3 th, .cp3 td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+    font-size: 24px;
+}
+
+.cp3 th {
+    background-color: #f8f8f8;
+}
+
+.cp4 {
+    text-align: right;
+    font-size: 18px;
+}
+
+.filter {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.filter label {
+    margin-right: 10px;
+}
+
+.filter select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;   
+}

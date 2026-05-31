@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help — My Website</title>
+    <meta name="description" content="Help and support center with searchable FAQ, keyboard shortcuts, contact form and quick links.">
+    <link rel="stylesheet" href="HELP.CSS">
+</head>
+<body>
+    <header class="hw-header">
+        <div class="container">
+            <h1>Help Center</h1>
+            <p class="lead">Find answers, shortcuts, and ways to contact us.</p>
+        </div>
+    </header>
+
+    <main class="container" id="main" tabindex="0">
+        <section class="search-section" aria-labelledby="searchLabel">
+            <label id="searchLabel" class="visually-hidden">Search help articles</label>
+            <div class="search-row">
+                <input id="search" type="search" placeholder="Search help, FAQs, and guides (press \"/\" to focus)" aria-label="Search help" />
+                <button id="clearSearch" aria-label="Clear search">✕</button>
+            </div>
+            <div class="quick-links" aria-hidden="false">
+                <a href="#faq" class="btn">FAQ</a>
+                <a href="#shortcuts" class="btn">Keyboard Shortcuts</a>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+        </section>
+
+        <section id="faq" class="faq" aria-labelledby="faqHeading">
+            <h2 id="faqHeading">Frequently Asked Questions</h2>
+            <p class="muted">Type in the search box to filter FAQs in real time.</p>
+            <div id="faqList" class="faq-list">
+                <article class="faq-item" data-tags="account login password">
+                    <h3 class="question">How do I reset my password?</h3>
+                    <div class="answer">Go to the account settings, choose "Password", and follow the reset flow. If you can't access your email, contact support.</div>
+                </article>
+                <article class="faq-item" data-tags="account signup">
+                    <h3 class="question">How do I create an account?</h3>
+                    <div class="answer">Click the Sign Up button on the homepage and fill in the required details. Verify your email to complete setup.</div>
+                </article>
+                <article class="faq-item" data-tags="payments refund">
+                    <h3 class="question">How do I request a refund?</h3>
+                    <div class="answer">Open the Orders page, select the order and choose Request Refund. Our team will review within 3-5 business days.</div>
+                </article>
+                <article class="faq-item" data-tags="features mobile">
+                    <h3 class="question">Does the site work on mobile?</h3>
+                    <div class="answer">Yes, our website is responsive and supports modern mobile browsers.</div>
+                </article>
+            </div>
+        </section>
+
+        <section id="shortcuts" class="shortcuts" aria-labelledby="shortcutsHeading">
+            <h2 id="shortcutsHeading">Keyboard Shortcuts</h2>
+            <ul>
+                <li><kbd>/</kbd> Focus search</li>
+                <li><kbd>?</kbd> Toggle shortcuts list</li>
+                <li><kbd>Esc</kbd> Clear search / close modals</li>
+                <li><kbd>Enter</kbd> Expand selected FAQ</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="contact" aria-labelledby="contactHeading">
+            <h2 id="contactHeading">Contact & Feedback</h2>
+            <form id="contactForm" aria-label="Contact form">
+                <div class="row">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" required />
+                </div>
+                <div class="row">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required />
+                </div>
+                <div class="row">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="row actions">
+                    <button type="submit" class="btn primary">Send Feedback</button>
+                    <button type="button" id="saveLocal" class="btn">Save Locally</button>
+                </div>
+                <div id="formMessage" role="status" aria-live="polite" class="form-message"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="hw-footer">
+        <div class="container">
+            <small>© My Website — Help Center</small>
+            <button id="copyEmail" class="link-like" aria-label="Copy support email">support@example.com</button>
+        </div>
+    </footer>
+
+    <script src="HELP.JS" defer></script>
+</body>
+</html>

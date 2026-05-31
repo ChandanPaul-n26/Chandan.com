@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Projectile Motion Simulator</title>
+    <link rel="stylesheet" href="P.MOTION.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>Projectile Motion Simulator</h1>
+        <p>Adjust initial speed, angle, and gravity. Press <strong>Launch</strong> to see the trajectory.</p>
+      </header>
+
+      <main>
+        <section class="canvas-wrap">
+          <div class="canvas-topbar">
+            <div class="canvas-title">Simulation View</div>
+            <div class="canvas-actions">
+              <label><input type="checkbox" id="toggleFull"> Full width</label>
+            </div>
+          </div>
+          <canvas id="simCanvas" width="1200" height="700" aria-label="projectile simulation"></canvas>
+          <div id="tooltip" class="tooltip" aria-hidden="true"></div>
+        </section>
+
+        <aside class="controls">
+          <div class="control-row">
+            <label>Angle (°)</label>
+            <input type="range" id="angleRange" min="0" max="89" value="45">
+            <input type="number" id="angleNum" min="0" max="89" value="45">
+          </div>
+
+          <div class="control-row">
+            <label>Speed (m/s)</label>
+            <input type="range" id="speedRange" min="0" max="200" value="50">
+            <input type="number" id="speedNum" min="0" max="200" value="50">
+          </div>
+
+          <div class="control-row">
+            <label>Gravity (m/s²)</label>
+            <input type="range" id="gravityRange" min="0.1" max="30" step="0.1" value="9.81">
+            <input type="number" id="gravityNum" min="0.1" max="30" step="0.1" value="9.81">
+          </div>
+
+          <div class="buttons">
+            <button id="launchBtn">Launch</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+          </div>
+
+          <div class="outputs">
+            <div>Time: <span id="time">0.00</span> s</div>
+            <div>Range: <span id="range">0.00</span> m</div>
+            <div>Max Height: <span id="height">0.00</span> m</div>
+            <div>Velocity (vx, vy): <span id="velocity">0.00, 0.00</span> m/s</div>
+          </div>
+
+          <div class="presets">
+            <label>Presets</label>
+            <button class="preset" data-angle="30" data-speed="40">30°, 40 m/s</button>
+            <button class="preset" data-angle="45" data-speed="50">45°, 50 m/s</button>
+            <button class="preset" data-angle="60" data-speed="60">60°, 60 m/s</button>
+          </div>
+
+          <div class="advanced">
+            <h4>Advanced</h4>
+            <div class="adv-row">
+              <label><input type="checkbox" id="autoScale" checked> Auto scale</label>
+              <label>Fixed scale (px/m): <input type="number" id="fixedScale" value="6" min="1" style="width:80px"></label>
+            </div>
+            <div class="adv-row">
+              <label><input type="checkbox" id="showGrid" checked> Grid</label>
+              <label><input type="checkbox" id="showPrediction" checked> Prediction</label>
+            </div>
+            <div class="adv-row">
+              <label><input type="checkbox" id="showTrail" checked> Trail</label>
+              <label><input type="checkbox" id="showVelocity" checked> Velocity</label>
+            </div>
+            <div class="adv-row">
+              <label><input type="checkbox" id="showTicks" checked> Show ticks</label>
+              <button id="exportBtn">Export CSV</button>
+            </div>
+            <div class="adv-row">
+              <label>Time: <input type="range" id="timeSlider" min="0" max="10" step="0.01" value="0" style="width:100%"></label>
+            </div>
+          </div>
+
+          <details>
+            <summary>How it works</summary>
+            <p>This simulator computes projectile motion using standard kinematic equations (no air resistance):</p>
+            <ul>
+              <li>x(t) = v0 * cos(angle) * t</li>
+              <li>y(t) = v0 * sin(angle) * t - 0.5 * g * t²</li>
+            </ul>
+            <p>Units: meters and seconds. The canvas uses a scaling factor to display meters as pixels.</p>
+          </details>
+        </aside>
+      </main>
+
+      <footer>
+        <small>Simple educational simulator — drag sliders or type numbers, then click Launch.</small>
+      </footer>
+    </div>
+
+    <script src="P.MOTION.js"></script>
+  </body>
+  </html>

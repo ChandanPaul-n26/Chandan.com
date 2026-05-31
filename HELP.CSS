@@ -1,0 +1,40 @@
+/* Basic styling for Help Center */
+:root{
+  --bg:#f7f9fb;
+  --card:#ffffff;
+  --accent:#0078d4;
+  --muted:#6b7280;
+  --radius:8px;
+  --max-width:980px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{font-family:Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);color:#111;margin:0;line-height:1.4}
+.container{max-width:var(--max-width);margin:0 auto;padding:20px}
+.hw-header{background:linear-gradient(90deg,#0f172a,#00264d);color:white;padding:28px 0;border-bottom:1px solid rgba(0,0,0,0.08)}
+.hw-header .lead{opacity:0.9;margin-top:6px}
+.search-section{margin:20px 0}
+.search-row{display:flex;gap:8px;align-items:center}
+input[type="search"]{flex:1;padding:12px 14px;border-radius:8px;border:1px solid #d1d5db;background:white;font-size:16px}
+#clearSearch{background:transparent;border:0;font-size:16px;cursor:pointer}
+.quick-links{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+.btn{background:var(--card);border:1px solid #e5e7eb;padding:8px 12px;border-radius:6px;text-decoration:none;color:inherit;font-size:14px}
+.btn.primary{background:var(--accent);color:#fff;border-color:transparent}
+.faq h2{margin-top:18px}
+.faq-list{margin-top:8px;display:grid;gap:10px}
+.faq-item{background:var(--card);padding:12px;border-radius:var(--radius);border:1px solid #e6eef8}
+.faq-item .question{margin:0;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-item .answer{margin-top:8px;max-height:0;overflow:hidden;transition:max-height 260ms ease;padding:0 2px}
+.faq-item.open .answer{max-height:400px;padding:8px 2px}
+.muted{color:var(--muted);font-size:14px}
+.shortcuts ul{list-style:none;padding:0;margin:8px 0}
+.shortcuts kbd{background:#111;color:#fff;padding:2px 6px;border-radius:4px;font-family:monospace}
+.contact .row{margin-bottom:10px}
+.contact label{display:block;font-size:13px;margin-bottom:6px}
+.contact input,.contact textarea{width:100%;padding:8px;border-radius:6px;border:1px solid #d1d5db}
+.actions{display:flex;gap:8px;align-items:center}
+.form-message{margin-top:10px;color:green}
+.hw-footer{padding:12px 0;background:transparent;border-top:1px solid rgba(0,0,0,0.04);margin-top:20px}
+.hw-footer .link-like{background:transparent;border:0;color:var(--accent);cursor:pointer}
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+@media (max-width:600px){.container{padding:12px}.hw-header{padding:18px}}

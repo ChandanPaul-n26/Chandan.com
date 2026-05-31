@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="CURRENCY.CSS">
+</head>
+<body>
+    <div class="cp">
+        <h1 class="heading">Currency Converter</h1>
+        <div class="currency">
+            <div class="curr">
+                <p class="c1">Select currency for convert :</p>  
+                    <select id="dropdown1">
+                        <option value="USD">US Dollar($)</option>
+                        <option value="EUR">Euro(€)</option>
+                        <option value="GBP">British Pound Sterling(£)</option>
+                        <option value="JPY">Japanease Yen(¥)</option>
+                        <option value="AUD">Australian Dollar($)</option>
+                        <option value="CAD">Canadian Dollar($)</option>
+                        <option value="CHF">Swiss Franc(₣)</option>
+                        <option value="INR">Indian Rupee(₹)</option>
+                        <option value="CNY">Chinese Yuan(¥)</option>
+                        <option value="SGD">Singapore Dollar($)</option>
+                        <option value="RUB">Russian Ruble(₽)</option>
+                        <option value="BRL">Brazilian Real(R$)</option>
+                        <option value="ZAR">South African Rand(R)</option>
+                    </select>
+                <input type="number" id="c1" placeholder="Enter amount">
+                <p class="c2">To :</p>
+                    <select id="dropdown2">
+                        <option value="USD">US Dollar($)</option>
+                        <option value="EUR">Euro(€)</option>
+                        <option value="GBP">British Pound Sterling(£)</option>
+                        <option value="JPY">Japanease Yen(¥)</option>
+                        <option value="AUD">Australian Dollar($)</option>
+                        <option value="CAD">Canadian Dollar($)</option>
+                        <option value="CHF">Swiss Franc(₣)</option>
+                        <option value="INR">Indian Rupee(₹)</option>
+                        <option value="CNY">Chinese Yuan(¥)</option>
+                        <option value="SGD">Singapore Dollar($)</option>
+                        <option value="RUB">Russian Ruble(₽)</option>
+                        <option value="BRL">Brazilian Real(R$)</option>
+                        <option value="ZAR">South African Rand(R)</option>
+                    </select>
+                <input type="number" id="c2" placeholder="Converted amount" disabled>
+                <div class="button123">
+                <button id="convert">Convert</button>
+                <button id="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ <script src="CURRENCY.JS"></script>   
+</body>
+</html>

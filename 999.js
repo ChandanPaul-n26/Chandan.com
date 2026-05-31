@@ -259,7 +259,7 @@ function restartGame() {
 
 document.getElementById('restart-btn').addEventListener('click', restartGame);
 document.getElementById('home-btn').addEventListener('click', () => {
-    window.location.href = '../../MY WEBSITE/HOME/HOME.HTML';
+    window.location.href = 'index.html';
 });
 
 // NEW: Mode switcher
